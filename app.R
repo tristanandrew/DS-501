@@ -125,11 +125,11 @@ server <- function(input, output, session) {
   load_data <- function() {
     dataset_path <- "data/tjandrew_HW6_cleaned.csv"
     
-    if (!file.exists(dataset_path)) {
-      success <- download_kaggle_data()
-      if(!success) {
-        stop("Failed to download the Kaggle dataset.")
-      }
+  #  if (!file.exists(dataset_path)) {
+    #  success <- download_kaggle_data()
+    #  if(!success) {
+      #  stop("Failed to download the Kaggle dataset.")
+     # }
     }
     
     my_data <- read.csv(dataset_path, stringsAsFactors = FALSE)
