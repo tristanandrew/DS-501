@@ -70,7 +70,7 @@ library(plotly)
 
 #Function to download dataset
 download_kaggle_data <- function() {
-  kaggle_credentials <- fromJSON("C:\Users\tandrew\OneDrive - Rapid Micro Biosystems\Documents\tjandrew_HW6\kaggle.json")
+  kaggle_credentials <- fromJSON("kaggle.json")
   kaggle_username <- kaggle_credentials$username
   kaggle_key <- kaggle_credentials$Key
   
