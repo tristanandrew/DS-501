@@ -15,7 +15,7 @@ ui <-fluidPage(
   actionButton("welcomeModal", "Show Welcome", style = "display: none;"),
   
   titlePanel(
-    div(icon("soccer-ball-o"), "Soccer Players with 50+ International Goals", style = "font-weight: bold; font-size: 24px; color: #0073C2;")
+    div(icon("futbol"), "Soccer Players with 50+ International Goals", style = "font-weight: bold; font-size: 24px; color: #0073C2;")
   ),
   sidebarLayout(
     sidebarPanel(
