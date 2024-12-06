@@ -130,7 +130,7 @@ server <- function(input, output, session) {
     #  if(!success) {
       #  stop("Failed to download the Kaggle dataset.")
      # }
-    }
+    #}
     
     my_data <- read.csv(dataset_path, stringsAsFactors = FALSE)
     
