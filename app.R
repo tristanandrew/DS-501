@@ -69,40 +69,40 @@ library(dplyr)
 library(plotly)
 
 #Function to download dataset
-download_kaggle_data <- function() {
-  kaggle_credentials <- fromJSON("kaggle.json")
-  kaggle_username <- kaggle_credentials$username
-  kaggle_key <- kaggle_credentials$Key
+#download_kaggle_data <- function() {
+ # kaggle_credentials <- fromJSON("kaggle.json")
+ # kaggle_username <- kaggle_credentials$username
+ # kaggle_key <- kaggle_credentials$Key
   
   #Define the dataset and path
-  dataset <- "whisperingkahuna/footballers-with-50-international-goals-men"
-  download_path <- "data/"
-  dataset_zip <- paste0(download_path, "dataset.zip")
+#  dataset <- "whisperingkahuna/footballers-with-50-international-goals-men"
+#  download_path <- "data/"
+#  dataset_zip <- paste0(download_path, "dataset.zip")
   
   #Ensure the folder exists
-  if (!dir.exists(download_path)) {
-    dir.create(download_path)
-  }
+ # if (!dir.exists(download_path)) {
+ #   dir.create(download_path)
+#  }
   
   #Kaggle API request URL
-  url <- paste0("https://www.kaggle.com/api/vi/datasets/download/", dataset, ".zip")
+#  url <- paste0("https://www.kaggle.com/api/vi/datasets/download/", dataset, ".zip")
   
   #Request to download
-  response <- GET(url,
-                  authenticate(kaggle_username, kaggle_key),
-                  write_disk(dataset_zip, overwrite = TRUE))
+ # response <- GET(url,
+  #                authenticate(kaggle_username, kaggle_key),
+   #               write_disk(dataset_zip, overwrite = TRUE))
   
   #Check and unzip if successful
-  if (status_code(response) == 200) {
-    print("Dataset downloaded successfully.")
-    unzip(dataset_zip, exdir = download_path)
-    return(TRUE)
-  } else {
-    print("Failed to download dataset.")
-    print(content(response, as = "text"))
-    return(FALSE)
-  }
-}
+#  if (status_code(response) == 200) {
+  #  print("Dataset downloaded successfully.")
+  #  unzip(dataset_zip, exdir = download_path)
+  #  return(TRUE)
+ # } else {
+ #   print("Failed to download dataset.")
+  #  print(content(response, as = "text"))
+  #  return(FALSE)
+ # }
+#}
 
 
 #Server function
